@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: steelblue" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminController">
+   <children>
+      <Label layoutX="272.0" layoutY="12.0" text="Admin" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TabPane fx:id="tabpane" layoutY="50.0" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: #eaeaea" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="profiletab" text="Profile">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="49.0" layoutY="67.0" text="Name" />
+                        <TextField fx:id="admin_name" layoutX="150.0" layoutY="63.0" prefHeight="25.0" prefWidth="197.0" />
+                        <TextField fx:id="admin_pass" layoutX="150.0" layoutY="114.0" prefHeight="25.0" prefWidth="197.0" />
+                        <Label layoutX="49.0" layoutY="118.0" text="Password" />
+                        <Button fx:id="save_changes_btn" layoutX="48.0" layoutY="221.0" mnemonicParsing="false" text="Save Changes" />
+                        <Button fx:id="log_me_out" layoutX="48.0" layoutY="261.0" mnemonicParsing="false" text="Log Out" />
+                        <Label fx:id="update_p" layoutX="120.0" layoutY="265.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab fx:id="chef_tab" text="Chef Applicants">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="chef_table" layoutX="1.0" layoutY="1.0" prefHeight="277.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="chef_name" prefWidth="312.0" text="Chef Name" />
+                            <TableColumn fx:id="chef_approve" minWidth="0.0" prefWidth="287.0" text="Approve" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="approve_chefs" layoutX="14.0" layoutY="282.0" mnemonicParsing="false" text="Approve Chefs" />
+                        <Label fx:id="chefs_approved" layoutX="131.0" layoutY="286.0" text="Approved Chefs Successfully" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="waiter_tab" text="Waiter Applicants">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="waiter_table" layoutX="1.0" layoutY="1.0" prefHeight="277.0" prefWidth="600.0">
+                           <columns>
+                              <TableColumn fx:id="waiter_name" prefWidth="300.0" text="Waiter Name" />
+                              <TableColumn fx:id="waiter_approve" prefWidth="299.0" text="Approve" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="approve_waiter" layoutX="14.0" layoutY="282.0" mnemonicParsing="false" text="Approve Waiters" />
+                        <Label fx:id="waiter_approved" layoutX="148.0" layoutY="286.0" text="Approved Waiters Successfully" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="foodtab" text="Food List">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="atable" layoutX="1.0" prefHeight="277.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="admin_food" prefWidth="131.0" text="Items to be Removed" />
+                            <TableColumn fx:id="admin_price" prefWidth="155.0" text="Price (₹)" />
+                              <TableColumn fx:id="admin_order" prefWidth="153.0" text="Remove" />
+                              <TableColumn fx:id="admin_chef" prefWidth="160.0" text="Who Added" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="remove_food" layoutX="249.0" layoutY="282.0" mnemonicParsing="false" text="Remove Marked" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Search">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="search_query" layoutX="29.0" layoutY="67.0" />
+                        <Label layoutX="29.0" layoutY="36.0" text="Type in your query" />
+                        <Button fx:id="search_btn" layoutX="29.0" layoutY="136.0" mnemonicParsing="false" text="Search" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="orders_show" text="Orders">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="orders_show_table" prefHeight="277.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="display_name" prefWidth="179.0" text="Who Ordered" />
+                            <TableColumn fx:id="display_food" prefWidth="224.0" text="Food" />
+                            <TableColumn fx:id="display_price" prefWidth="196.0" text="Price" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

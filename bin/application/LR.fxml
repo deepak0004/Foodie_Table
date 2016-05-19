@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="673.0" style="-fx-background-color: seagreen;" xmlns="http://javafx.com/javafx/8" fx:controller="application.ControllerFirst" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="4.0" layoutY="65.0" prefHeight="439.0" prefWidth="332.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="22.0" layoutY="14.0" text="Sign In">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="signin_email" layoutX="24.0" layoutY="120.0" prefHeight="38.0" prefWidth="283.0" />
+            <PasswordField fx:id="signin_pass" layoutX="25.0" layoutY="192.0" prefHeight="38.0" prefWidth="283.0" />
+            <Label layoutX="26.0" layoutY="97.0" text="Username*" />
+            <Label layoutX="25.0" layoutY="173.0" text="Password*" />
+            <Button fx:id="signin_btn" layoutX="23.0" layoutY="274.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="283.0" style="-fx-background-color: indigo;" text="Sign In" textFill="WHITE" />
+        	 <Label fx:id="signin_label1" layoutX="80.0" layoutY="349.0" text="" />
+         </children>
+      </Pane>
+      <Label layoutX="188.0" layoutY="14.0" text="Restaurant Management" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Pane layoutX="337.0" layoutY="65.0" prefHeight="439.0" prefWidth="332.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="22.0" layoutY="14.0" text="Sign Up">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="97.0" text="Name*" />
+            <Label layoutX="25.0" layoutY="173.0" text="Username*" />
+            <Button fx:id="signup_btn" layoutX="24.0" layoutY="367.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="283.0" style="-fx-background-color: indigo;" text="Sign Up" textFill="WHITE" />
+            <Label layoutX="25.0" layoutY="244.0" text="Password*" />           
+            <TextField fx:id="signup_name" layoutX="24.0" layoutY="120.0" prefHeight="38.0" prefWidth="283.0" />
+            <TextField fx:id="signup_email" layoutX="25.0" layoutY="192.0" prefHeight="38.0" prefWidth="283.0" />
+            <PasswordField fx:id="signup_pass" layoutX="25.0" layoutY="265.0" prefHeight="38.0" prefWidth="283.0" />
+            <RadioButton layoutX="25.0" layoutY="323.0" mnemonicParsing="false" text="Customer">
+            <toggleGroup><ToggleGroup fx:id="get_info"/></toggleGroup></RadioButton>
+            <RadioButton layoutX="140.0" layoutY="323.0" mnemonicParsing="false" text="Chef" toggleGroup="$get_info"/>
+            <RadioButton layoutX="250.0" layoutY="323.0" mnemonicParsing="false" text="Waiter" toggleGroup="$get_info"/>
+            <Label fx:id="signup_label1" layoutX="10.0" layoutY="413.0" text="" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane fx:controller="application.SearchController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="404.0" prefWidth="268.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="search_table" layoutX="7.0" layoutY="53.0" prefHeight="267.0" prefWidth="254.0">
+        <columns>
+          <TableColumn fx:id="res_col" prefWidth="124.0" text="Result" />
+          <TableColumn fx:id="cat_col" prefWidth="128.0" text="Category" />
+        </columns>
+      </TableView>
+      <Label layoutX="71.0" layoutY="12.0" text="Search Results">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory ?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="316.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Showfood">
+   <children>
+      <TableView fx:id="f1table" layoutX="8.0" layoutY="63.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="277.0" prefWidth="301.0">
+         <columns>
+            <TableColumn fx:id="t1_food" prefWidth="100.0" text="Food">
+               <cellValueFactory>
+                  <PropertyValueFactory property="food" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="t1_price" prefWidth="100.0" text="Price">
+               <cellValueFactory>
+                  <PropertyValueFactory property="price" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="t1_order" prefWidth="100.0" text="Order">
+               <cellValueFactory>
+                  <PropertyValueFactory property="check" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <Label layoutX="114.0" layoutY="14.0" prefHeight="35.0" prefWidth="148.0" text="Results">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="f1_order_btn" layoutX="132.0" layoutY="475.0" mnemonicParsing="false" style="-fx-background-color: #0066ff;" text="Place Order" textFill="WHITE" />
+	<Label fx:id="success_search_order_made" layoutX="97.0" layoutY="500.0" prefHeight="35.0" prefWidth="148.0" />
+   </children>
+</AnchorPane>

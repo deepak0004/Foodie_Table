@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CustomerController">
+   <children>
+      <TabPane fx:id="customer_tabpane" layoutY="65.0" prefHeight="335.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="customer_tab_profile" text="Profile">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="48.0" layoutY="55.0" text="Name" />
+                        <Label layoutX="48.0" layoutY="110.0" text="Password" />
+                        <TextField fx:id="cs_name" layoutX="187.0" layoutY="51.0" prefHeight="25.0" prefWidth="198.0" />
+                        <TextField fx:id="cs_pass" layoutX="187.0" layoutY="106.0" prefHeight="25.0" prefWidth="198.0" />
+                        <Button fx:id="cs_changes_saved_btn" layoutX="47.0" layoutY="217.0" mnemonicParsing="false" text="Save Changes" />
+                        <Button fx:id="log_me_out" layoutX="48.0" layoutY="261.0" mnemonicParsing="false" text="Log Out" />
+                        <Label fx:id="cs_changes_saved" layoutX="120.0" layoutY="265.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="customer_tab_order" text="Order Food">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="600.0" style="-fx-background-color: white;">
+                     <children>
+                        <Button fx:id="cs_order_btn" layoutX="130.0" layoutY="280.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="106.0" style="-fx-background-color: #0066ff;" text="Place Order" textFill="WHITE" />
+                        <TableView fx:id="ftable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="273.0" prefWidth="349.0">
+                           <columns>
+                              <TableColumn fx:id="t_food" prefWidth="114.0" text="Orderable Items">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="food" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn fx:id="t_price" prefWidth="147.0" text="Price">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="price" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn fx:id="t_order" prefWidth="87.0" text="Order">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="check" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                           </columns>
+                        </TableView>
+                        <Label fx:id="ordered_successfully" layoutX="403.0" layoutY="200.0" />
+                        <Text layoutX="360.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Show Food below( that is not ordered ) :" />
+                        <TextField fx:id="filter_val" layoutX="392.0" layoutY="111.0" />
+                        <Button fx:id="filter_btn" layoutX="392.0" layoutY="153.0" mnemonicParsing="false" text="Filter" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="customer_tab_status" text="Order Status">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <TableView fx:id="table_status" prefHeight="277.0" prefWidth="470">
+                          <columns>
+                            <TableColumn fx:id="status_food" prefWidth="124.0" text="Food " />
+                            <TableColumn fx:id="status_price" prefWidth="101.0" text="Price" />
+                            <TableColumn fx:id="status_status" prefWidth="126.0" text="Status" />
+                            <TableColumn fx:id="status_remove" prefWidth="126.0" text="Remove" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="501.0" layoutY="175.0" text="Total Bill">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="total_rs" layoutX="506.0" layoutY="213.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="remove_orders" layoutX="487.0" layoutY="79.0" mnemonicParsing="false" text="Remove Order" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Search">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <TextField fx:id="customer_search_q" layoutX="202.0" layoutY="55.0" />
+                        <Label layoutX="51.0" layoutY="59.0" text="Search Food" />
+                        <Button fx:id="customer_food_search" layoutX="51.0" layoutY="128.0" mnemonicParsing="false" text="Search" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="242.0" layoutY="14.0" text="Customer">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
