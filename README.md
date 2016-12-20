@@ -1,2 +1,1 @@
-# Restaurant
-DBMS Course Project
+# Foodie_Table
